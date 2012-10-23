@@ -1,4 +1,7 @@
 class Cd
+  attr_reader :rank
+  attr_accessor :title
+
   def initialize(title, rank)
     @title = title.capitalize
     @rank = rank
@@ -17,13 +20,15 @@ class Cd
     @rank -= 1
   end
 
+  def price
+    @rank.to_f * 0.5
+  end
+
 end
 
 cd1 = Cd.new("back in black", 10)
 puts cd1
 cd1.thumbs_up
 puts cd1
-cd2 = Cd.new("is this it?", 9)
-puts cd2
-cd2.thumbs_down
-puts cd2
+puts cd1.title = "Divine Madness"
+puts cd1.price
