@@ -1,6 +1,7 @@
 class Cd
   attr_reader :rank
   attr_accessor :title
+  #attr_writer
 
   def initialize(title, rank)
     @title = title.capitalize
